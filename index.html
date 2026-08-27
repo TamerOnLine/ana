@@ -3,29 +3,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5d2743">
+  <meta name="description" content="Eine herzliche Dankesbotschaft für Ana Maria.">
   <title>Für unsere liebe Ana Maria</title>
   <style>
-    :root{--ink:#2d2630;--rose:#b25a75;--paper:#fffaf5;--gold:#d7a64b}
-    *{box-sizing:border-box} body{margin:0;min-height:100vh;display:grid;place-items:center;padding:32px;background:linear-gradient(135deg,#f6dde4,#f8edd9 55%,#e3eff0);font-family:Georgia,"Times New Roman",serif;color:var(--ink)}
-    main{width:min(760px,100%);background:rgba(255,250,245,.94);border:1px solid rgba(178,90,117,.25);border-radius:24px;padding:clamp(30px,7vw,64px);box-shadow:0 22px 70px rgba(77,46,57,.18);text-align:center}
-    .flower{font-size:2rem;margin-bottom:14px} h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.08;margin:0 0 12px;color:#8f3d5a} .dear{font-size:1.25rem;font-style:italic;margin:0 0 34px}
-    p{font-size:1.08rem;line-height:1.75;margin:18px 0;text-align:left}.wish{margin:34px 0;padding:26px;border-block:1px solid rgba(215,166,75,.55);text-align:left}.wish h2{font-size:1.25rem;color:#a16b21;margin:0 0 14px}.wish ul{margin:0;padding-left:24px;line-height:1.9;font-size:1.08rem}
-    blockquote{margin:32px 0 0;font-style:italic;line-height:1.7;color:#654757}.thanks{margin:32px 0 0;font-size:1.25rem;font-weight:bold;color:#8f3d5a}@media(max-width:540px){body{padding:16px}p,.wish ul{font-size:1rem}}
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=DM+Sans:wght@400;500;600&display=swap');
+
+    :root{--plum:#402031;--wine:#6b2f50;--rose:#b96985;--blush:#f7e9eb;--cream:#fffdf9;--gold:#c59552;--ink:#3e3440}
+    *{box-sizing:border-box} html{background:#eadadf} body{margin:0;min-height:100vh;color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;background:radial-gradient(circle at 12% 9%,#ffdfe7 0 8%,transparent 28%),radial-gradient(circle at 88% 86%,#f5d9ae 0 7%,transparent 26%),linear-gradient(130deg,#5b2946 0%,#813c5f 46%,#b56e73 100%)}
+    .page{position:relative;isolation:isolate;min-height:100vh;display:grid;place-items:center;padding:clamp(22px,5vw,72px) 18px;overflow:hidden}
+    .orb{position:absolute;border-radius:50%;filter:blur(1px);opacity:.58;z-index:-1}.orb.one{width:390px;height:390px;background:#f8b9c8;top:-170px;right:-115px}.orb.two{width:350px;height:350px;background:#e7b25b;bottom:-210px;left:-100px}
+    main{width:min(900px,100%);background:rgba(255,253,249,.97);border:1px solid rgba(255,255,255,.75);box-shadow:0 36px 90px rgba(40,12,28,.38);padding:clamp(32px,7vw,86px);position:relative}
+    main:before,main:after{content:"";position:absolute;pointer-events:none}.frame{position:absolute;inset:12px;border:1px solid rgba(197,149,82,.5)}.frame:before,.frame:after{content:"✦";position:absolute;color:var(--gold);font-size:14px}.frame:before{top:-10px;left:-7px}.frame:after{right:-7px;bottom:-10px}
+    .eyebrow{margin:0 0 14px;text-align:center;text-transform:uppercase;letter-spacing:.22em;font-weight:600;font-size:.68rem;color:var(--wine)}
+    .motif{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--gold);font-size:1.35rem;margin-bottom:19px}.motif:before,.motif:after{content:"";height:1px;width:58px;background:linear-gradient(90deg,transparent,var(--gold))}
+    .motif:after{transform:scaleX(-1)}h1{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(3rem,8vw,5.75rem);line-height:.86;letter-spacing:-.04em;text-align:center;color:var(--plum);margin:0 auto 26px;max-width:700px}.dear{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(1.45rem,3vw,1.9rem);font-style:italic;text-align:center;color:var(--wine);margin:0 0 42px}
+    .intro{max-width:660px;margin:0 auto 37px;text-align:center;font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(1.4rem,3vw,1.72rem);line-height:1.38;color:var(--plum)}.intro strong{font-weight:700}
+    .copy{max-width:670px;margin:auto;font-size:1rem;line-height:1.82}.copy p{margin:0 0 21px}.copy p:first-child:first-letter{float:left;font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;font-size:4.6rem;line-height:.72;color:var(--wine);padding:.15em .14em 0 0}
+    .sun{display:block;text-align:center;font-size:1.5rem;margin:22px 0 -2px}.wishes{margin:54px auto 38px;max-width:670px;background:linear-gradient(110deg,#f9eaf0,#fdf4e4);padding:clamp(24px,4vw,38px);text-align:center;border-top:1px solid rgba(197,149,82,.65);border-bottom:1px solid rgba(197,149,82,.65)}.wishes h2{font-family:"Cormorant Garamond",Georgia,serif;font-size:2rem;margin:0 0 18px;color:var(--plum)}.wishes ul{padding:0;margin:0;list-style:none;display:grid;gap:10px}.wishes li{font-size:1rem}.wishes li:before{content:"✦";color:var(--gold);font-size:.75rem;margin-right:10px}
+    blockquote{max-width:610px;margin:0 auto;font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(1.35rem,3vw,1.65rem);line-height:1.38;text-align:center;font-style:italic;color:var(--wine)}.signoff{text-align:center;margin:48px 0 0;font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(1.8rem,4vw,2.45rem);font-weight:700;color:var(--plum)}.heart{color:#bd5a73}
+    footer{position:absolute;bottom:22px;font-size:.67rem;letter-spacing:.12em;color:rgba(255,255,255,.72);text-transform:uppercase}
+    @media (max-width:560px){.page{padding:16px 10px 46px}.frame{inset:8px}.copy{font-size:.96rem}.motif{margin-bottom:14px}.intro{margin-bottom:30px}.wishes{margin-top:38px}.signoff{margin-top:38px}}
+    @media (prefers-reduced-motion:no-preference){main{animation:rise .7s ease-out both}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}}
   </style>
 </head>
 <body>
-  <main>
-    <div class="flower">💌 🌷</div>
-    <h1>Für unsere liebe Ana Maria</h1>
-    <p class="dear">Liebe Ana Maria,</p>
-    <p>von Herzen danken wir dir für deine Geduld, deine Unterstützung und deine große Hingabe.</p>
-    <p>Mit deiner positiven Art, deinem wunderbaren Sinn für Humor, deiner Ausdauer und deinem großen Herzen hast du unseren Unterricht zu etwas ganz Besonderem gemacht.</p>
-    <p>Du hast uns nicht nur Deutsch beigebracht, sondern uns auch stets ermutigt, an uns selbst zu glauben. Du hast uns Freude am Lernen und mehr Selbstvertrauen geschenkt.</p>
-    <p>Mit deiner leichten und freundlichen Art bringst du Freude und Wärme in unseren Alltag. Möge dein Leben stets so hell und klar sein wie ein sonniger Himmel. ☀️</p>
-    <p>Für viele von uns bist du nicht nur eine großartige Lehrerin, sondern auch eine liebevolle und gute Freundin. Deine Freundlichkeit und alles, was du für uns getan hast, werden wir in schöner Erinnerung behalten.</p>
-    <section class="wish"><h2>✨ Für deine Zukunft wünschen wir dir</h2><ul><li>Gesundheit und Glück</li><li>Erfolg auf allen Wegen</li><li>die Erfüllung deiner Wünsche und Träume</li></ul></section>
-    <blockquote>Möge der Herr dich und deine Angehörigen beschützen und dich stets mit lieben Menschen umgeben. 🙏</blockquote>
-    <p class="thanks">Vielen Dank für alles, liebe Ana Maria! ❤️</p>
-  </main>
+  <div class="page">
+    <div class="orb one"></div><div class="orb two"></div>
+    <main>
+      <div class="frame"></div>
+      <p class="eyebrow">Mit großer Wertschätzung</p>
+      <div class="motif">🌷</div>
+      <h1>Für unsere<br>liebe Ana Maria</h1>
+      <p class="dear">Liebe Ana Maria,</p>
+      <p class="intro">von Herzen danken wir dir für deine <strong>Geduld</strong>, deine <strong>Unterstützung</strong> und deine große <strong>Hingabe</strong>.</p>
+      <div class="copy">
+        <p>Mit deiner positiven Art, deinem wunderbaren Sinn für Humor, deiner Ausdauer und deinem großen Herzen hast du unseren Unterricht zu etwas ganz Besonderem gemacht.</p>
+        <p>Du hast uns nicht nur Deutsch beigebracht, sondern uns auch stets ermutigt, an uns selbst zu glauben. Du hast uns Freude am Lernen und mehr Selbstvertrauen geschenkt.</p>
+        <p>Mit deiner leichten und freundlichen Art bringst du Freude und Wärme in unseren Alltag. Möge dein Leben stets so hell und klar sein wie ein sonniger Himmel.</p>
+        <span class="sun">☀️</span>
+        <p>Für viele von uns bist du nicht nur eine großartige Lehrerin, sondern auch eine liebevolle und gute Freundin. Deine Freundlichkeit und alles, was du für uns getan hast, werden wir in schöner Erinnerung behalten.</p>
+      </div>
+      <section class="wishes" aria-labelledby="wishes-title">
+        <h2 id="wishes-title">Für deine Zukunft wünschen wir dir</h2>
+        <ul><li>Gesundheit und Glück</li><li>Erfolg auf allen Wegen</li><li>Die Erfüllung deiner Wünsche und Träume</li></ul>
+      </section>
+      <blockquote>„Möge der Herr dich und deine Angehörigen beschützen und dich stets mit lieben Menschen umgeben.“ 🙏</blockquote>
+      <p class="signoff">Vielen Dank für alles, liebe Ana Maria! <span class="heart">♥</span></p>
+    </main>
+    <footer>Mit Liebe und Dankbarkeit</footer>
+  </div>
 </body>
 </html>
